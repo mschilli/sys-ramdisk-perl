@@ -6,7 +6,7 @@ use ExtUtils::MakeMaker;
 my $meta_merge = {
     META_MERGE => {
         resources => {
-            repository => 'http://github.com//sys-ramdisk-perl',
+            repository => 'http://github.com/mschilli/sys-ramdisk-perl',
         },
     }
 };
