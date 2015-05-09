@@ -13,8 +13,6 @@ our $VERSION = "0.01";
 my %class_mapper =
   map { $_->[0] => __PACKAGE__ . "::" . $_->[1] }
     ( [linux  => "Linux"],
-      [macos  => "OSX"],
-      [osx    => "OSX"],
       [darwin => "OSX"],
     );
 
@@ -70,30 +68,9 @@ sub os_supported_list {
 }
 
 ###########################################
-sub os_find {
-###########################################
-    my $uname = bin_find("uname");
-
-    if(! defined $uname) {
-        LOGWARN "uname command not found in PATH";
-        return undef;
-    }
-
-    my($uname_info) = tap $uname;
-    chomp $uname_info;
-
-    if(! defined $uname or length $uname == 0) {
-        LOGWARN "uname didn't return anything meaningful";
-        return undef;
-    }
-
-    return $uname_info;
-}
-
-###########################################
 sub os_class_find {
 ###########################################
-    my $os = os_find();
+    my $os = $^O;
 
     my $keyword = lc $os;
 

@@ -14,7 +14,7 @@ my $nof_tests = 4;
 
 plan tests => $nof_tests;
 
-my $os = Sys::Ramdisk->os_find();
+my $os = $^O;
 my $supported = Sys::Ramdisk->os_class_find();
 my $uid = $>;
 
@@ -24,7 +24,7 @@ SKIP: {
     }
 
     if(lc $os eq "linux" and $uid != 0) {
-        skip "RAM disks to be created as root on Linux - skipping tests", 
+        skip "RAM disks to be created as root on Linux - skipping tests",
              $nof_tests;
     }
 
