@@ -14,6 +14,8 @@ my %class_mapper =
   map { $_->[0] => __PACKAGE__ . "::" . $_->[1] }
     ( [linux  => "Linux"],
       [darwin => "OSX"],
+      [openbsd => "OpenBSD"],
+      [freebsd => "FreeBSD"],
     );
 
 ###########################################

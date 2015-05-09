@@ -23,8 +23,8 @@ SKIP: {
         skip "OS '$os' not supported", $nof_tests;
     }
 
-    if(lc $os eq "linux" and $uid != 0) {
-        skip "RAM disks to be created as root on Linux - skipping tests",
+    if(lc $os ne "darwin" and $uid != 0) {
+        skip "RAM disks to be created as root on most Non-Darwin systems - skipping tests",
              $nof_tests;
     }
 
