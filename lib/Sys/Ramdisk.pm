@@ -6,7 +6,6 @@ use warnings;
 use Log::Log4perl qw(:easy);
 use Sysadm::Install qw(:all);
 use File::Temp qw(tempdir);
-use File::Basename;
 
 our $VERSION = "0.01";
 
