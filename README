@@ -55,7 +55,7 @@ METHODS
         actually landed.
 
 SUPPORTED OPERATING SYSTEMS
-    Currently, only Linux and OSX are supported.
+    Currently Linux, OSX, FreeBSD and OpenBSD are supported.
 
 LEGALESE
     Copyright 2010 by Mike Schilli, all rights reserved. This program is
